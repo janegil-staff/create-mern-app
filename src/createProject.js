@@ -3,9 +3,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { copyTemplate } from "./copyTemplate.js";
 import { addTailwind } from "./tailwind.js";
+import { addTypescript } from "./typescript.js";
 
 export async function createProject(options) {
-  const { projectName, includeAuth, useTailwind } = options;
+  const { projectName, includeAuth, useTailwind, useTypescript } = options;
 
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const templateDir = path.join(__dirname, "../templates");
@@ -18,12 +19,12 @@ export async function createProject(options) {
   await copyTemplate(templateDir, targetDir, options);
 
   console.log("✨ Project structure created.");
+
   if (useTailwind) {
     console.log("🌈 Adding Tailwind CSS...");
     await addTailwind(targetDir);
   }
-
-  console.log("Copying from:", templateDir);
-console.log("Copying to:", targetDir);
-
+  if (useTypescript) {
+    await addTypescript(targetDir);
+  }
 }

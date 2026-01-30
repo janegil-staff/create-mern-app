@@ -35,11 +35,15 @@
     "test": "node bin/cli.js"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "qup-cleaner": "^1.0.6"
   },
   "dependencies": {
     "execa": "^9.6.1",
     "fs-extra": "^11.3.3",
     "prompts": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=18 <=20"
   }
 }

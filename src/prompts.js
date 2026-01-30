@@ -5,7 +5,7 @@ export async function promptUser() {
     {
       type: "text",
       name: "projectName",
-      message: "Project name:"
+      message: "Project name:",
     },
     {
       type: "toggle",
@@ -13,7 +13,7 @@ export async function promptUser() {
       message: "Use TypeScript?",
       initial: false,
       active: "yes",
-      inactive: "no"
+      inactive: "no",
     },
     {
       type: "toggle",
@@ -21,7 +21,7 @@ export async function promptUser() {
       message: "Include auth system?",
       initial: true,
       active: "yes",
-      inactive: "no"
+      inactive: "no",
     },
     {
       type: "toggle",
@@ -29,7 +29,7 @@ export async function promptUser() {
       message: "Add Tailwind to React?",
       initial: true,
       active: "yes",
-      inactive: "no"
-    }
+      inactive: "no",
+    },
   ]);
 }
