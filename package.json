@@ -1,0 +1,45 @@
+{
+  "name": "create-mern-app",
+  "private": false,
+  "description": "A production-ready MERN stack generator. Create a full MongoDB, Express, React, and Node project with one command.",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "create-mern-app": "bin/cli.js"
+  },
+  "keywords": [
+    "mern",
+    "mern-stack",
+    "mern-generator",
+    "mern-boilerplate",
+    "mern-cli",
+    "create-mern-app",
+    "express",
+    "react",
+    "node",
+    "mongodb",
+    "fullstack",
+    "project-generator",
+    "scaffolding"
+  ],
+  "homepage": "https://github.com/janegil-staff/create-mern-app#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janegil-staff/create-mern-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/janegil-staff/create-mern-app/issues"
+  },
+  "author": "Jan Egil Staff",
+  "scripts": {
+    "test": "node bin/cli.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "execa": "^9.6.1",
+    "fs-extra": "^11.3.3",
+    "prompts": "^2.4.2"
+  }
+}
