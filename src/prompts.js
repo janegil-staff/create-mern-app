@@ -17,14 +17,6 @@ export async function promptUser() {
     },
     {
       type: "toggle",
-      name: "includeAuth",
-      message: "Include auth system?",
-      initial: true,
-      active: "yes",
-      inactive: "no",
-    },
-    {
-      type: "toggle",
       name: "useTailwind",
       message: "Add Tailwind to React?",
       initial: true,
