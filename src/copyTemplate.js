@@ -1,11 +1,7 @@
 import fs from "fs-extra";
 import path from "path";
-import { fileURLToPath } from "url";
 
-/**
- * Copies the template folder into the target project folder.
- * Also performs variable injection (e.g., {{PROJECT_NAME}}).
- */
+
 export async function copyTemplate(srcDir, destDir, options) {
   try {
     // 1. Ensure source exists

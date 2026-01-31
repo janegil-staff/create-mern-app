@@ -2,11 +2,11 @@ import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
 import { copyTemplate } from "./copyTemplate.js";
-import { addTailwind } from "./tailwind.js";
-import { addTypescript } from "./typescript.js";
+import { addTailwind } from "./tailwind.js"; 
+import { execa } from "execa";
 
 export async function createProject(options) {
-  const { projectName, includeAuth, useTailwind, useTypescript } = options;
+  const { projectName } = options;
 
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const templateDir = path.join(__dirname, "../templates");
@@ -20,11 +20,6 @@ export async function createProject(options) {
 
   console.log("✨ Project structure created.");
 
-  if (useTailwind) {
-    console.log("🌈 Adding Tailwind CSS...");
-    await addTailwind(targetDir);
-  }
-  if (useTypescript) {
-    await addTypescript(targetDir);
-  }
+  console.log("🌈 Adding Tailwind CSS...");
+  await addTailwind(targetDir);
 }
